@@ -60,7 +60,23 @@ then
 fi
 
 echo "--------------------------------------------"
+echo
 echo "All the command-line parameters are: "$*""
+
+echo "============================================"
+
+
+args=$#
+echo
+echo "The number of args passed $args"
+echo
+echo "The last argument passed ${!args}"
+echo
+echo "The last argument passed is also ${!#}"
+echo
+echo 'But ${!$#} is not :)'
+
+
 
 
 if [ $# -lt "$MINPARAMS" ] 
